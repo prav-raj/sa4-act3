@@ -13,9 +13,13 @@ while True:
         print("Congratulations! You guessed the right number.")
         break
     else:
-        print("Sorry! Try again.")
+        if int(guess) < number:
+            print("Sorry, you're too low! Try again.")
+        else:
+            print("Sorry, you're too high! Try again.")
         tries -= 1
     
     if tries == 0:
         print(f"You're out of tries! The number was {number}")
+        break
 
